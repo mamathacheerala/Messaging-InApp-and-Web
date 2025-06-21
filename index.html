@@ -1,8 +1,27 @@
 <html>
   <head>
-    <title>External Live Agent</title>
+    <title>External Live Agent Test</title>
   </head>
   <body>
-    Body Index
+    <script type='text/javascript'>
+      	function initEmbeddedMessaging() {
+      		try {
+      			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+      
+      			embeddedservice_bootstrap.init(
+      				'00DD2000000Czwr',
+      				'GitHub_Demo',
+      				'https://data-enterprise-7191-dev-ed.scratch.my.site.com/ESWGitHubDemo1750541453272',
+      				{
+      					scrt2URL: 'https://data-enterprise-7191-dev-ed.scratch.my.salesforce-scrt.com'
+      				}
+      			);
+      		} catch (err) {
+      			console.error('Error loading Embedded Messaging: ', err);
+      		}
+      	};
+      </script>
+      <script type='text/javascript' src='https://data-enterprise-7191-dev-ed.scratch.my.site.com/ESWGitHubDemo1750541453272/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+
   </body>
 </html>
